@@ -55,6 +55,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className='studentEmojiContainer'>
+        <img src={`/images/${Math.ceil(Math.random() * 12)}.png`} alt="Student Emoji" className="studentEmoji" />
+      </div>
       <h1>Borrar y Estudiar</h1>
       <form className='flex-col' onSubmit={handleSubmit}>
         <TextFormInput
