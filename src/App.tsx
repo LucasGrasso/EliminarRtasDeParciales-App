@@ -9,6 +9,7 @@ function App() {
   const [fileName, setFileName] = useState<string>('Tu PDF')
   const [searchStrings, setSearchStrings] = useState<string>('')
   const [file, setFile] = useState<File | null>(null)
+  const [randomNumber] = useState<number>(Math.ceil(Math.random() * 12))
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -56,7 +57,7 @@ function App() {
   return (
     <div className="App">
       <div className='studentEmojiContainer'>
-        <img src={`/images/${Math.ceil(Math.random() * 12)}.png`} alt="Student Emoji" className="studentEmoji" />
+        <img src={`/images/${randomNumber}.png`} alt="Student Emoji" className="studentEmoji" />
       </div>
       <h1>Borrar y Estudiar</h1>
       <form className='flex-col' onSubmit={handleSubmit}>
