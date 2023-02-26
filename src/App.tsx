@@ -29,7 +29,7 @@ function App() {
     formData.append("file", file, file.name);
     setLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/eraseAnswers', {
+      const res = await fetch('https://api.eliminarrtas.lucasgrasso.com.ar/eraseAnswers', {
         method: "POST",
         body: formData,
       })
