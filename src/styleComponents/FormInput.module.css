@@ -33,6 +33,12 @@
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: light) {
+    .TextFormInput {
+        background-color: #ffffff;
+    }
+}
+
 .label {
     display: block;
     font-size: 0.875rem;
