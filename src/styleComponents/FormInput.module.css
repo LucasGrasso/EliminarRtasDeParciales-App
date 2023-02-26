@@ -20,7 +20,8 @@
 }
 
 .TextFormInput {
-    border-width: 0px;
+    border: 0.8px solid;
+    background-color: #242424;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     padding-left: 0.5rem;
@@ -29,6 +30,7 @@
     border-radius: 0.375rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    box-sizing: border-box;
 }
 
 .label {

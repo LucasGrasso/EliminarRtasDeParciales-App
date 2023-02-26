@@ -3,13 +3,12 @@ import './App.css'
 import Button from './components/Button'
 import FileFormInput from './components/FileFormInput'
 import TextFormInput from './components/TextFormInput'
+
 function App() {
   const [loading, setLoading] = useState<boolean>(false)
   const [fileName, setFileName] = useState<string>('Tu PDF')
   const [searchStrings, setSearchStrings] = useState<string>('')
   const [file, setFile] = useState<File | null>(null)
-  const [blobURL, setBlobUrl] = useState('');
-
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -29,22 +28,29 @@ function App() {
     formData.append("search_strings", JSON.stringify(arrSearchStrings));
     formData.append("file", file, file.name);
     setLoading(true)
-    fetch('http://127.0.0.1:8000/eraseAnswers', {
-      method: "POST",
-      credentials: "include",
-      body: formData,
-    }).then(res => res.blob())
-      .then(blob => {
-        setBlobUrl(URL.createObjectURL(blob));
-        setLoading(false);
-        console.log(blob);
+    try {
+      const res = await fetch('http://127.0.0.1:8000/eraseAnswers', {
+        method: "POST",
+        body: formData,
       })
-      .catch(err => {
-        setLoading(false)
-        console.log(err);
-        alert(`Error; ${err}`)
-      });
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      setLoading(false)
 
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${fileName}_SinCorrecciones.pdf`;
+      document.body.appendChild(link);
+
+      link.click();
+
+      URL.revokeObjectURL(url);
+      link.remove();
+
+    } catch (e) {
+      console.log(e)
+      setLoading(false)
+    }
   }
 
   return (
