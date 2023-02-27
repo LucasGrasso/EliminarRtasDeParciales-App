@@ -16,7 +16,7 @@ function App() {
     if (e.target.files) {
       const file = e.target.files[0];
       setFile(file)
-      setFileName(file.name)
+      setFileName(file.name.split('.')[0])
     } else {
       setSearchStrings(e.target.value)
     }
