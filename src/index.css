@@ -92,6 +92,13 @@ button:focus-visible {
   height: 1.25rem;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
 
 .opacity-75 {
   opacity: 0.75;
