@@ -4,10 +4,9 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 10%;
-  }
+body {
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .app {
