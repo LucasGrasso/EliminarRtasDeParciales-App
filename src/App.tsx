@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Button from './components/Button'
 import FileFormInput from './components/FileFormInput'
+import Loader from './components/Loader'
 import TextFormInput from './components/TextFormInput'
 
 function App() {
@@ -53,6 +54,8 @@ function App() {
       setLoading(false)
     }
   }
+
+  if (!randomNumber) return <Loader />
 
   return (
     <div className="App">
