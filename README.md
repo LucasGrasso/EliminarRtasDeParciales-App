@@ -7,7 +7,9 @@
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![typescript](https://img.shields.io/badge/TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=white)
 
-WebApp interfaz para la API EliminarRtasdeParciales (https://api.eliminarrtas.lucasgrasso.com.ar/) 
+https://borraryestudiar.lucasgrasso.com.ar/  
+
+WebApp interfaz para la API [EliminarRtasdeParciales](https://github.com/LucasGrasso/EliminarRtasDeParciales)
  
  Elimina respuestas dadas en un array de strings "search_strings" yel subrallado amarillo del pdf "file".
  
