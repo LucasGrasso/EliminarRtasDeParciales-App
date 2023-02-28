@@ -92,8 +92,8 @@ function App() {
         Acepto donaciones en 0x8FB40436758Ea9e1a8317f54293Af74be02faFf0
       </p>
       <div className='flex-row'>
-        <a href='https://github.com/LucasGrasso/EliminarRtasDeParciales-App'>Repo(App)</a>
-        <a href='https://github.com/LucasGrasso/EliminarRtasDeParciales'>Repo(Server)</a>
+        <a href='https://github.com/LucasGrasso/EliminarRtasDeParciales-App' target="_blank">Repo(App)</a>
+        <a href='https://github.com/LucasGrasso/EliminarRtasDeParciales' target="_blank">Repo(Server)</a>
       </div>
     </div >
   )
