@@ -16,7 +16,7 @@ WebApp interfaz para la API [EliminarRtasdeParciales](https://github.com/LucasGr
  __El PDF DEBE ser de texto, sino el progama no funciona correctamente__  
  
  ## Ejemplos:  
- [Parcial Con respuestas](https://borraryestudiar.lucasgrasso.com.ar/pruebas/parcialICSEValdez.pdf)  
- [Parcial Sin respuestas](https://borraryestudiar.lucasgrasso.com.ar/pruebas/parcialICSEValdez_SinCorrecciones.pdf)
-
+ [Parcial Con respuestas](https://borraryestudiar.lucasgrasso.com.ar/pruebas/Parcial_ICSEValdez.pdf)(Pasandole que borre V,F,X,GE,TE,II,IF)  
+ [Parcial Sin respuestas](https://borraryestudiar.lucasgrasso.com.ar/pruebas/Parcial_ICSEValdez_SinCorrecciones.pdf)
+ 
 _Creditos a la catedra Valdez de ICSE(Introducción al Conocimiento de la Sociedad y Estado), CBC/UBAXXI UBA, por los parciales usados para ejemplificar el uso de la aplicación_
