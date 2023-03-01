@@ -27,7 +27,11 @@ function App() {
     e.preventDefault()
     const arrSearchStrings = searchStrings.split(',').map((s: string) => s.trim())
     const formData = new FormData();
-    formData.append("search_strings", JSON.stringify(arrSearchStrings));
+    for (let i = 0; i < arrSearchStrings.length; i++) {
+      if (arrSearchStrings[i] !== '') {
+        formData.append("search_strings", arrSearchStrings[i]);
+      }
+    }
     formData.append("file", file, file.name);
     setLoading(true)
     try {
