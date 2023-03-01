@@ -104,6 +104,13 @@ button:focus-visible {
   opacity: 0.75;
 }
 
+.text-error {
+  color: rgb(220 38 38);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

@@ -8,6 +8,7 @@ type Props = {
     type: "submit" | "button";
     children?: React.ReactNode;
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    errorMsg?: string;
 };
 
 export default function Button({
@@ -15,22 +16,28 @@ export default function Button({
     loadingMsg,
     children,
     type,
+    errorMsg,
     ...props
 }: Props) {
     return (
-        <button
-            {...props}
-            type={type}
-            disabled={loading}
-        >
-            {loading ? (
-                <>
-                    <Loader />
-                    {loadingMsg || children}
-                </>
-            ) : (
-                children
-            )}
-        </button>
+        <div className="flex-col">
+            <button
+                {...props}
+                type={type}
+                disabled={loading}
+            >
+                {loading ? (
+                    <>
+                        <Loader />
+                        {loadingMsg || children}
+                    </>
+                ) : (
+                    children
+                )}
+            </button>
+            {
+                errorMsg && <span className="text-error">{errorMsg}</span>
+            }
+        </div>
     );
 }

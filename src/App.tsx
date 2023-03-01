@@ -11,6 +11,7 @@ function App() {
   const [searchStrings, setSearchStrings] = useState<string>('')
   const [file, setFile] = useState<File | null>(null)
   const [randomNumber] = useState<number>(Math.ceil(Math.random() * 12))
+  const [errorMsg, setErrorMsg] = useState<string>('')
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -32,8 +33,14 @@ function App() {
         formData.append("search_strings", arrSearchStrings[i]);
       }
     }
+    if (formData.getAll('search_strings').length === 0) {
+      setErrorMsg('Debe ingresar al menos una respuesta a borrar');
+      setLoading(false);
+      return
+    }
+    setErrorMsg('');
     formData.append("file", file, file.name);
-    setLoading(true)
+    setLoading(true);
     try {
       const res = await fetch('https://api.eliminarrtas.lucasgrasso.com.ar/eraseAnswers', {
         method: "POST",
@@ -54,6 +61,7 @@ function App() {
       link.remove();
 
     } catch (e) {
+      setErrorMsg('Hubo un error, intente de nuevo')
       console.log(e)
       setLoading(false)
     }
@@ -88,6 +96,7 @@ function App() {
           loading={loading}
           loadingMsg="Ya te llega tu parcial..."
           type='submit'
+          errorMsg={errorMsg}
         >
           Borrar Respuestas
         </Button>
