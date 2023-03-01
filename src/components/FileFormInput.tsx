@@ -21,8 +21,7 @@ export default function FileFormInput({ name, label, onChange, required = true, 
         e.preventDefault();
         if (!e.dataTransfer) return;
         let files = Array.from(e.dataTransfer.files);
-        accept = "*/.pdf";
-        var MIMEtype = new RegExp(accept.replace("*", ".*"));
+        const MIMEtype = new RegExp(accept);
         files = files.filter((file) => MIMEtype.test(file.type));
         if (files.length > 0 && fileInput.current) {
             fileInput.current.files = e.dataTransfer.files;
@@ -80,7 +79,7 @@ export default function FileFormInput({ name, label, onChange, required = true, 
                 accept={accept}
                 onChange={onChange}
             />
-            <label htmlFor={name} className={styles.labelWithIcon}>
+            <label htmlFor={name} className={styles.LabelWithIcon}>
                 <UploadIcon className={styles.UploadIcon} />
                 {placeholder !== "" && <span>{placeholder}</span>}
             </label>
