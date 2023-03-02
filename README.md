@@ -7,6 +7,8 @@
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![typescript](https://img.shields.io/badge/TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=white)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63def062-8954-4e3a-83dd-bb8dc1fc23b3/deploy-status)](https://app.netlify.com/sites/borraryestudiar/deploys)
+
 https://borraryestudiar.lucasgrasso.com.ar/  
 
 WebApp interfaz para la API [EliminarRtasdeParciales](https://github.com/LucasGrasso/EliminarRtasDeParciales)
