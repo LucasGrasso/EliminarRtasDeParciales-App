@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { ReactComponent as UploadIcon } from "../images/UploadIcon.svg";
 import styles from "../styleComponents/FormInput.module.css";
 
@@ -13,7 +13,6 @@ type FileFormInputProps = {
 };
 
 export default function FileFormInput({ name, label, onChange, required = true, accept, id, placeholder }: FileFormInputProps) {
-    const [hovering, setHovering] = useState<boolean>(false);
     const fileInput = useRef<HTMLInputElement>(null);
 
     function onDrop(e: DragEvent) {
@@ -32,13 +31,11 @@ export default function FileFormInput({ name, label, onChange, required = true, 
     function addHover(e: any): void {
         e.stopPropagation();
         e.preventDefault();
-        setHovering(true);
     }
 
     function removeHover(e: any): void {
         e.stopPropagation();
         e.preventDefault();
-        setHovering(false);
     }
 
     useEffect(() => {
