@@ -11,8 +11,8 @@ https://borraryestudiar.lucasgrasso.com.ar/
 
 WebApp interfaz para la API [EliminarRtasdeParciales](https://github.com/LucasGrasso/EliminarRtasDeParciales)
  
- Elimina respuestas dadas en un array de strings "search_strings" yel subrallado amarillo del pdf "file".
- 
+Borra respuestas y subrayado.
+
  __El PDF DEBE ser de texto, sino el progama no funciona correctamente__  
  
  ## Ejemplos:  
