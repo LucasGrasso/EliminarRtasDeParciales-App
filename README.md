@@ -36,3 +36,7 @@ _Creditos a la catedra Valdez de ICSE(Introducción al Conocimiento de la Socied
  ```
  
  __¡Con tu ayuda podemos facilitarle el estudio a mas personas!__
+
+---
+
+ _Creditos a Microsoft por los emojis usados._
